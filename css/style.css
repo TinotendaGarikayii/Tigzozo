@@ -1,0 +1,408 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  overflow-x: hidden;
+}
+
+.pc-nav {
+  display: none;
+}
+
+.mobile-nav {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile-nav .hamburger {
+  height: 4rem;
+  width: 4rem;
+  border: 1px solid black;
+  gap: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-nav .hamburger .line {
+  height: 2px;
+  width: 70%;
+  background: black;
+}
+
+.banner .left .text h1 {
+  font-weight: bolder;
+}
+.banner .left .text .btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+.banner .left .text .btn button {
+  border: none;
+  background-color: purple;
+  width: 8rem;
+  color: white;
+}
+.banner .left .text .btn button1 {
+  background-color: white;
+  width: 8rem;
+  color: black;
+  border: 3px solid purple;
+}
+.banner .left .text .btn .tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner .left .text img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+}
+.banner .left .text .tag p1 {
+  color: purple;
+}
+.banner .right .cards {
+  display: flex;
+}
+
+.media {
+  margin: 2rem 0;
+}
+.media .container .row .left .text-img {
+  margin-top: 2rem;
+}
+.media .container .row .left .images {
+  display: flex;
+  position: relative;
+}
+.media .container .row .left .images img {
+  height: 60%;
+  width: 40%;
+}
+.media .container .row .left .images .pic {
+  margin-top: 100px;
+}
+.media .container .row .left .images .pic img {
+  height: 100%;
+  width: 80%;
+}
+.media .container .row .right {
+  margin: 4rem 0;
+}
+.media .container .row .right .image-one img {
+  height: 60vh;
+  width: 100%;
+}
+.media .container .row .right .image-one img .text-three p {
+  padding-top: 5rem;
+}
+.media button {
+  background: darkviolet;
+  border: none;
+  color: white;
+  width: 8rem;
+  height: 2rem;
+}
+
+.services .container .gallery {
+  gap: 10px;
+  display: flex;
+}
+.services .container .gallery .pics {
+  width: 30vw;
+  position: relative;
+}
+.services .container .gallery .pics img {
+  width: 100%;
+  height: 40vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.services .container .gallery .pics .text-h3 {
+  position: absolute;
+  top: 5px;
+  background-color: blue;
+  align-items: center;
+}
+.services .container .gallery .pics .text-h3 h3 {
+  align-items: baseline;
+  text-align: center;
+  color: aqua;
+}
+.services .container .gallery .card-one {
+  background: purple;
+  color: white;
+  height: 40vh;
+}
+.services .container .gallery .card-one .texting {
+  padding: 2rem;
+  width: 100%;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+  .pc-nav {
+    display: block;
+  }
+  .pc-nav .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pc-nav .flex-container ul {
+    display: flex;
+    color: black;
+    gap: 12px;
+  }
+  .pc-nav .flex-container ul li {
+    color: black;
+    font-size: 20px;
+  }
+  .pc-nav .flex-container ul li span {
+    color: rgb 128, 34, 140;
+  }
+  .pc-nav .flex-container ul .img1 {
+    height: 30px;
+    width: 30px;
+  }
+  .banner .left .text {
+    margin-top: 50px;
+  }
+  .banner .left .text h1 {
+    width: 100%;
+    font-size: 30px;
+  }
+  .banner .left .text .btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .banner .left .text button {
+    margin-right: 40px;
+    gap: 10px;
+    width: 10rem;
+  }
+  .banner .left .text .button1 {
+    width: 10rem;
+  }
+  .banner .right .cards {
+    display: flex;
+    flex-direction: row;
+  }
+  .banner .right .cards .first-pic {
+    position: relative;
+    top: 50px;
+  }
+  .media {
+    margin: 5rem 0;
+  }
+  .media .container .row .left .text-img {
+    margin-left: 5rem;
+  }
+  .media .container .row .left .text-img .text {
+    font-weight: 500;
+    width: 50%;
+  }
+  .media .container .row .left .text-img .text .images {
+    display: flex;
+    flex-direction: row;
+    width: 2rem;
+  }
+  .media .container .row .left .text-img .text .images .pic {
+    position: relative;
+    top: 100px;
+  }
+  .media .container .row .right {
+    margin: 4rem 0;
+  }
+  .media .container .row .right .image-one img {
+    height: 30vh;
+    width: 100%;
+  }
+  .media .container .row .right .image-one img .text-three p {
+    padding-top: 5rem;
+  }
+  .services .container .gallery {
+    gap: 10px;
+    display: flex;
+  }
+  .services .container .gallery .pics {
+    width: 30vw;
+    position: relative;
+  }
+  .services .container .gallery .pics img {
+    width: 100%;
+    height: 40vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+  }
+  .services .container .gallery .pics .text-h3 {
+    position: absolute;
+    top: 5px;
+    background-color: blue;
+    align-items: center;
+  }
+  .services .container .gallery .pics .text-h3 h3 {
+    align-items: baseline;
+    text-align: center;
+    color: aqua;
+  }
+  .services .container .gallery .card-one {
+    background: purple;
+    color: white;
+    width: 30vw;
+    height: 40vh;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .pc-nav .flex-container .ul {
+    gap: 85px;
+  }
+  .media {
+    margin: 5rem 0;
+  }
+  .media .container .row .left .text-img {
+    margin-left: 5rem;
+  }
+  .media .container .row .left .text-img .text {
+    font-weight: 500;
+    width: 50%;
+  }
+  .media .container .row .left .text-img .text .images {
+    display: flex;
+    flex-direction: row;
+    width: 2rem;
+  }
+  .media .container .row .left .text-img .text .images .pic {
+    position: relative;
+    top: 100px;
+  }
+  .media .container .row .right {
+    margin: 4rem 0;
+  }
+  .media .container .row .right .image-one img {
+    height: 60vh;
+    width: 100%;
+  }
+  .media .container .row .right .image-one img .text-three p {
+    padding-top: 5rem;
+  }
+  .services .container .gallery {
+    gap: 10px;
+    display: flex;
+  }
+  .services .container .gallery .pics {
+    width: 30vw;
+    position: relative;
+  }
+  .services .container .gallery .pics img {
+    width: 100%;
+    height: 75vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+  }
+  .services .container .gallery .pics .text-h3 {
+    position: absolute;
+    top: 5px;
+    background-color: blue;
+    align-items: center;
+  }
+  .services .container .gallery .pics .text-h3 h3 {
+    align-items: baseline;
+    text-align: center;
+    color: aqua;
+  }
+  .services .container .gallery .card-one {
+    background: purple;
+    color: white;
+    width: 30vw;
+    height: 75vh;
+  }
+}
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+/* Set width to make card deck cards 100% width *//*# sourceMappingURL=style.css.map */
