@@ -162,7 +162,9 @@ table {
 }
 
 .services .container .gallery {
+  padding-top: 2rem;
   gap: 10px;
+  margin-left: 4rem;
   display: flex;
 }
 .services .container .gallery .pics {
@@ -188,14 +190,145 @@ table {
   text-align: center;
   color: aqua;
 }
+.services .container .gallery .pics .text-h3 .icon-five {
+  background-color: purple;
+  height: 7rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
+}
+.services .container .gallery .pics .text-h3 .icon-five img {
+  height: 6rem;
+  width: 4rem;
+}
 .services .container .gallery .card-one {
   background: purple;
   color: white;
   height: 40vh;
 }
+.services .container .gallery .card-one span {
+  text-decoration: underline;
+}
 .services .container .gallery .card-one .texting {
   padding: 2rem;
   width: 100%;
+}
+
+.clients {
+  margin-top: 3rem;
+}
+.clients .container .row .left .our-clients img {
+  width: 100%;
+}
+.clients .container .row .left .our-clients .company {
+  padding-top: 1rem;
+}
+.clients .container .row .right {
+  margin-top: 2rem;
+}
+.clients .container .row .right img {
+  width: 100%;
+}
+.clients .container .row .right .bride {
+  padding-top: 1rem;
+}
+
+.instagram {
+  margin-top: 3rem;
+}
+.instagram .container .seen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.instagram .container .insta {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.instagram .container .insta img {
+  width: 15%;
+  gap: 50px;
+}
+.instagram .container .insta .second-pic {
+  position: relative;
+  top: 5rem;
+}
+.instagram .container .tig {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.instagram .container .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.instagram .container .btn button {
+  background: darkviolet;
+  color: white;
+  width: 7rem;
+  height: 3rem;
+  border: none;
+}
+
+.footer {
+  background: darkviolet;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+.footer .container {
+  margin-top: 2rem;
+  margin-left: 6rem;
+  display: flex;
+}
+.footer .container .row {
+  display: flex;
+}
+.footer .container .row .icon {
+  display: flex;
+  color: white;
+  padding-top: 20px;
+  gap: 10px;
+}
+.footer .container .row .icon img {
+  height: 100%;
+}
+.footer .container .row .icon .copy {
+  width: 65%;
+}
+.footer .container .row .icons-two {
+  display: flex;
+  gap: 20px;
+}
+.footer .container .row .center {
+  color: white;
+}
+.footer .container .row .center span {
+  text-decoration: underline;
+}
+.footer .container .row .mid {
+  color: white;
+}
+.footer .container .row .mid span {
+  text-decoration: underline;
+}
+.footer .container .row .end {
+  color: white;
+}
+.footer .container .row .end span {
+  text-decoration: underline;
+}
+.footer .container .row .end .contact {
+  display: flex;
+  gap: 10px;
+}
+.footer .container .row .end .contact img {
+  height: 100%;
 }
 
 /*
@@ -399,6 +532,30 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     color: white;
     width: 30vw;
     height: 75vh;
+  }
+  .clients {
+    padding: 6rem;
+  }
+  .clients .container .row .left .our-clients {
+    margin: 3rem;
+    padding-left: 5rem;
+  }
+  .clients .container .row .left .our-clients img {
+    width: 100%;
+  }
+  .clients .container .row .left .our-clients .company {
+    padding-top: 1rem;
+  }
+  .clients .container .row .right {
+    margin-top: 2rem;
+  }
+  .clients .container .row .right img {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .clients .container .row .right .bride {
+    padding-top: 1rem;
   }
 }
 /*

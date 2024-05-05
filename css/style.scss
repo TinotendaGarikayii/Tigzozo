@@ -200,7 +200,9 @@ table {
 .services{
     .container{
         .gallery{
+            padding-top: 2rem;
             gap: 10px;
+            margin-left: 4rem;
             display: flex;
             .pics{
                 width: 30vw;
@@ -224,14 +226,27 @@ table {
                     text-align: center;
                     color: aqua;
                    }
-                    
+                    .icon-five{
+                        background-color: purple;
+                        height: 7rem;
+                            width: 5rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: last baseline;
+                        img{
+                           height: 6rem; 
+                            width: 4rem;
+                        }
+                    }
                 }
         }
         .card-one{
             background: purple;
             color: white;
             height: 40vh;
-            
+            span{
+                text-decoration: underline;
+            }
             .texting{
                padding: 2rem;
                width: 100%;
@@ -241,6 +256,146 @@ table {
     }
 }
 
+.clients{
+    margin-top: 3rem;
+    .container{
+        
+            .row{
+                
+               .left{
+                
+                .our-clients{
+                        // margin: 3rem;
+                        // padding-left: 5rem;
+                        img{
+                            width: 100%;
+                        }
+                        .company{
+                            padding-top: 1rem;
+                        }
+               } 
+            }
+        
+            .right{
+                margin-top: 2rem;
+                img{
+                width: 100%;
+                    
+                }
+                .bride{
+                    padding-top: 1rem;
+                }
+            }
+    }
+}
+}
+
+.instagram{
+    margin-top: 3rem;
+    .container{
+        .seen{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        .insta{
+            gap: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 15%;
+                gap: 50px;
+            }
+            .second-pic{
+                position: relative;
+                top: 5rem;
+            }
+        }
+
+        .tig{
+            margin-top: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button{
+                background:darkviolet;
+                color: white;
+                width: 7rem;
+                height: 3rem;
+                border: none;
+            }
+        }
+    }
+}
+
+.footer{
+    background:darkviolet;
+    margin-top: 2rem;
+    padding: 2rem;
+    .container{
+        margin-top: 2rem;
+        margin-left: 6rem;
+        display: flex;
+       .row{
+        display: flex;
+          .icon{
+            display: flex;
+            color: white;
+            padding-top: 20px;
+            gap: 10px;
+            img{
+                height: 100%;
+            }
+            .copy{
+                width: 65%;
+
+            }
+          }
+          .icons-two{
+            display: flex;
+            gap: 20px;
+          }
+
+          .center{
+            color: white;
+            span{
+                text-decoration: underline;
+            }
+          }
+
+          .mid{
+             color: white;
+             span{
+                text-decoration: underline;
+             }
+          }
+
+          .end{
+            color: white;
+            
+            span{
+                text-decoration: underline;
+            }
+            .contact{
+               display: flex;
+               gap: 10px;
+               img{
+                height: 100%;
+               }
+            }
+          }
+
+
+       }
+    }
+}
 
 
 /*
@@ -517,7 +672,42 @@ No media query since this is the default in Bootstrap because it is "mobile firs
             }
             }
         }
-    }   
+    } 
+    
+    .clients{
+        padding: 6rem;
+        .container{
+            
+                .row{
+                    
+                   .left{
+                    
+                    .our-clients{
+                            margin: 3rem;
+                            padding-left: 5rem;
+                            img{
+                                width: 100%;
+                            }
+                            .company{
+                                padding-top: 1rem;
+                            }
+                   } 
+                }
+            
+                .right{
+                    margin-top: 2rem;
+                    img{
+                        width: 100%;
+                        height: fit-content;
+                    }
+                    .bride{
+                        padding-top: 1rem;
+                    }
+                }
+        }
+    }
+    }
+    
 }
 
 
