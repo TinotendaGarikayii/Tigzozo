@@ -2,6 +2,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: "JosefinSans-Bold.ttf";
+  src: url("/fonts/josefin-sans/JosefinSans-Bold.ttf");
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -56,8 +60,18 @@ table {
   overflow-x: hidden;
 }
 
+.black {
+  background: black;
+  color: white;
+}
+
 .pc-nav {
   display: none;
+}
+.pc-nav .dark {
+  height: 40px;
+  width: 40px;
+  margin-left: 100px;
 }
 
 .mobile-nav {
@@ -82,40 +96,42 @@ table {
   background: black;
 }
 
+.banner {
+  font-family: "JosefinSans-Bold.ttf";
+}
 .banner .left .text h1 {
   font-weight: bolder;
+  font-family: "JosefinSans-Bold.ttf";
 }
-.banner .left .text .btn {
+.banner .left .text p {
+  font-family: "JosefinSans-Bold.ttf";
+}
+.banner .left .btn {
   display: flex;
   justify-content: space-evenly;
 }
-.banner .left .text .btn button {
+.banner .left .btn button {
   border: none;
   background-color: purple;
   width: 8rem;
   color: white;
 }
-.banner .left .text .btn button1 {
+.banner .left .btn button1 {
   background-color: white;
   width: 8rem;
   color: black;
   border: 3px solid purple;
 }
-.banner .left .text .btn .tags {
+.banner .left .tags {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.banner .left .text img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.banner .left .tags img {
   flex-direction: row;
   width: 30px;
   height: 30px;
   margin-top: 20px;
 }
-.banner .left .text .tag p1 {
+.banner .left .tag p1 {
   color: purple;
 }
 .banner .right .cards {
@@ -179,28 +195,21 @@ table {
   -o-object-position: top;
      object-position: top;
 }
-.services .container .gallery .pics .text-h3 {
-  position: absolute;
-  top: 5px;
-  background-color: blue;
-  align-items: center;
-}
-.services .container .gallery .pics .text-h3 h3 {
-  align-items: baseline;
-  text-align: center;
-  color: aqua;
-}
-.services .container .gallery .pics .text-h3 .icon-five {
-  background-color: purple;
-  height: 7rem;
-  width: 5rem;
-  display: flex;
-  justify-content: center;
+.services .container .gallery .pics h3 {
   align-items: last baseline;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  padding-left: 8rem;
 }
-.services .container .gallery .pics .text-h3 .icon-five img {
-  height: 6rem;
-  width: 4rem;
+.services .container .gallery .pics .pic {
+  background-color: purple;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }
 .services .container .gallery .card-one {
   background: purple;
@@ -211,14 +220,34 @@ table {
   text-decoration: underline;
 }
 .services .container .gallery .card-one .texting {
+  position: relative;
   padding: 2rem;
   width: 100%;
+}
+.services .container .gallery .card-one .texting .pic-pic {
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }
 
 .clients {
   margin-top: 3rem;
 }
-.clients .container .row .left .our-clients img {
+.clients .container .row .left .our-clients .forward {
+  position: relative;
+}
+.clients .container .row .left .our-clients .forward .forward-pic {
+  background-color: purple;
+  height: 20px;
+  width: 30px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.clients .container .row .left .our-clients .forward img {
   width: 100%;
 }
 .clients .container .row .left .our-clients .company {
@@ -226,6 +255,20 @@ table {
 }
 .clients .container .row .right {
   margin-top: 2rem;
+}
+.clients .container .row .right .forward {
+  position: relative;
+}
+.clients .container .row .right .forward .forward-pic {
+  background-color: purple;
+  height: 20px;
+  width: 30px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.clients .container .row .right .forward img {
+  width: 100%;
 }
 .clients .container .row .right img {
   width: 100%;
@@ -279,56 +322,68 @@ table {
 .footer {
   background: darkviolet;
   margin-top: 2rem;
-  padding: 2rem;
 }
 .footer .container {
   margin-top: 2rem;
-  margin-left: 6rem;
-  display: flex;
 }
-.footer .container .row {
-  display: flex;
+.footer .container .row .left {
+  padding-left: 6rem;
 }
-.footer .container .row .icon {
+.footer .container .row .left .icon {
   display: flex;
   color: white;
   padding-top: 20px;
   gap: 10px;
 }
-.footer .container .row .icon img {
+.footer .container .row .left .icon img {
   height: 100%;
 }
-.footer .container .row .icon .copy {
+.footer .container .row .left .icon .copy {
   width: 65%;
 }
-.footer .container .row .icons-two {
+.footer .container .row .left .icons-two {
   display: flex;
   gap: 20px;
 }
-.footer .container .row .center {
+.footer .container .row .left-two {
+  display: flex;
+  gap: 10px;
+  padding-top: 2rem;
+  font-size: medium;
+  line-height: 1rem;
+}
+.footer .container .row .left-two .center {
   color: white;
 }
-.footer .container .row .center span {
+.footer .container .row .left-two .center span {
   text-decoration: underline;
 }
-.footer .container .row .mid {
+.footer .container .row .left-two .mid {
   color: white;
 }
-.footer .container .row .mid span {
+.footer .container .row .left-two .mid span {
   text-decoration: underline;
 }
-.footer .container .row .end {
+.footer .container .row .left-two .end {
   color: white;
 }
-.footer .container .row .end span {
+.footer .container .row .left-two .end span {
   text-decoration: underline;
 }
-.footer .container .row .end .contact {
+.footer .container .row .left-two .end .contact {
   display: flex;
   gap: 10px;
 }
-.footer .container .row .end .contact img {
+.footer .container .row .left-two .end .contact img {
   height: 100%;
+}
+
+.active {
+  display: block !important;
+}
+
+.hide {
+  display: none;
 }
 
 /*
@@ -466,6 +521,190 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   }
 }
 /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .banner .left .text {
+    margin-top: 50px;
+  }
+  .banner .left .text h1 {
+    width: 100%;
+    font-size: 30px;
+  }
+  .banner .left .btn {
+    display: flex;
+    gap: 15px;
+    padding-left: 0.1rem;
+  }
+  .banner .left .btn button {
+    border: none;
+    background-color: purple;
+    width: 8rem;
+    color: white;
+    gap: 10px;
+  }
+  .banner .left .btn button1 {
+    background-color: white;
+    width: 8rem;
+    color: black;
+    border: 3px solid purple;
+  }
+  .banner .left .tags {
+    display: flex;
+  }
+  .banner .left .tags img {
+    width: 30px;
+    height: 30px;
+    margin-top: 0;
+  }
+  .banner .right .cards {
+    display: flex;
+    flex-direction: row;
+  }
+  .banner .right .cards .first-pic {
+    position: relative;
+    top: 50px;
+  }
+  .media {
+    margin: 5rem 0;
+  }
+  .media .container .row .left .text-img {
+    margin-left: 5rem;
+  }
+  .media .container .row .left .text-img .text {
+    font-weight: 500;
+    width: 50%;
+  }
+  .media .container .row .left .text-img .text .images {
+    display: flex;
+    flex-direction: row;
+    width: 2rem;
+  }
+  .media .container .row .left .text-img .text .images .pic {
+    position: relative;
+    top: 100px;
+  }
+  .media .container .row .right {
+    margin: 4rem 0;
+  }
+  .media .container .row .right .image-one img {
+    height: 30vh;
+    width: 100%;
+  }
+  .media .container .row .right .image-one img .text-three p {
+    padding-top: 5rem;
+  }
+  .services .container .gallery {
+    gap: 10px;
+    display: flex;
+  }
+  .services .container .gallery .pics {
+    width: 30vw;
+    position: relative;
+  }
+  .services .container .gallery .pics img {
+    width: 100%;
+    height: 40vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+  }
+  .services .container .gallery .pics .text-h3 {
+    position: absolute;
+    top: 5px;
+    background-color: blue;
+    align-items: center;
+  }
+  .services .container .gallery .pics .text-h3 h3 {
+    align-items: baseline;
+    text-align: center;
+    color: aqua;
+  }
+  .services .container .gallery .card-one {
+    background: purple;
+    color: white;
+    width: 30vw;
+    height: 40vh;
+  }
+  .clients {
+    margin-top: 3rem;
+  }
+  .clients .container .row .left .our-clients .forward {
+    position: relative;
+  }
+  .clients .container .row .left .our-clients .forward .forward-pic {
+    background-color: purple;
+    height: 20px;
+    width: 30px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+  .clients .container .row .left .our-clients .forward img {
+    width: 100%;
+  }
+  .clients .container .row .left .our-clients .company {
+    padding-top: 1rem;
+  }
+  .clients .container .row .right {
+    margin-top: 2rem;
+  }
+  .clients .container .row .right img {
+    width: 100%;
+  }
+  .footer {
+    background: darkviolet;
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+  .footer .container {
+    margin-top: 2rem;
+    margin-left: 6rem;
+  }
+  .footer .container .row {
+    display: flex;
+  }
+  .footer .container .row .icon {
+    display: flex;
+    color: white;
+    padding-top: 20px;
+    gap: 10px;
+  }
+  .footer .container .row .icon img {
+    height: 100%;
+  }
+  .footer .container .row .icon .copy {
+    width: 65%;
+  }
+  .footer .container .row .icons-two {
+    display: flex;
+    gap: 20px;
+  }
+  .footer .container .row .center {
+    color: white;
+  }
+  .footer .container .row .center span {
+    text-decoration: underline;
+  }
+  .footer .container .row .mid {
+    color: white;
+  }
+  .footer .container .row .mid span {
+    text-decoration: underline;
+  }
+  .footer .container .row .end {
+    color: white;
+  }
+  .footer .container .row .end span {
+    text-decoration: underline;
+  }
+  .footer .container .row .end .contact {
+    display: flex;
+    gap: 10px;
+  }
+  .footer .container .row .end .contact img {
+    height: 100%;
+  }
+}
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .pc-nav .flex-container .ul {
@@ -553,9 +792,6 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     width: 100%;
     height: -moz-fit-content;
     height: fit-content;
-  }
-  .clients .container .row .right .bride {
-    padding-top: 1rem;
   }
 }
 /*

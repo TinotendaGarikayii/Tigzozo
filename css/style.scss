@@ -2,6 +2,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+    font-family: 'JosefinSans-Bold.ttf';
+    src: url('/fonts/josefin-sans/JosefinSans-Bold.ttf');
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -53,8 +57,18 @@ table {
     overflow-x: hidden;
 }
 
+.black{
+    background: black;
+    color: white;
+}
+
 .pc-nav{
     display: none;
+    .dark{
+        height: 40px;
+        width: 40px;
+        margin-left: 100px;
+    }
 }
 .mobile-nav{
     display: block;
@@ -79,11 +93,17 @@ table {
 }
 
 .banner{
+    font-family: 'JosefinSans-Bold.ttf';
     .left{
         .text{
             h1{
                 font-weight: bolder;
+                font-family: 'JosefinSans-Bold.ttf';
             }
+            p{
+                font-family: 'JosefinSans-Bold.ttf';
+            }
+        }
             .btn{
                 display: flex;
                 justify-content: space-evenly;
@@ -100,34 +120,35 @@ table {
                     color: black;
                     border: 3px solid purple;
                 }
-                .tags{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
+               
+            }
+            .tags{
+        
+            display: flex;
+
+                img{
+                
+                    
+                    
+                    flex-direction: row;
+                    width: 30px;
+                    height: 30px;
+                    margin-top: 20px;
+                    
+                 //    .card{
+                 //     height: 50%;
+                 //     width: 50%;
+                 //    }
+                 }
             }
             
-            img{
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               flex-direction: row;
-               width: 30px;
-               height: 30px;
-               margin-top: 20px;
-               
-            //    .card{
-            //     height: 50%;
-            //     width: 50%;
-            //    }
-            }
             
             .tag{
                 p1{
                     color: purple;
                 }
                }
-        }
+       
 
         
     }
@@ -216,29 +237,27 @@ table {
                     
                 }
                 
-                .text-h3{
-                   position: absolute;
-                   top: 5px;
-                   background-color: blue;
-                   align-items: center;
+               
                    h3{
-                    align-items: baseline;
+                    align-items: last baseline;
                     text-align: center;
-                    color: aqua;
+                    color: white;
+                    position: absolute;
+                    bottom: 0px;
+                    padding-left: 8rem;
                    }
-                    .icon-five{
-                        background-color: purple;
-                        height: 7rem;
-                            width: 5rem;
-                            display: flex;
-                            justify-content: center;
-                            align-items: last baseline;
-                        img{
-                           height: 6rem; 
-                            width: 4rem;
+                
+                        .pic{
+                            
+                            background-color:purple;
+                            height: 30px;
+                            width: 30px;
+                            position: absolute;
+                            bottom:0px;
+                            right: 0px;
                         }
-                    }
-                }
+                    
+                
         }
         .card-one{
             background: purple;
@@ -247,10 +266,19 @@ table {
             span{
                 text-decoration: underline;
             }
-            .texting{
+            .texting{ position: relative;
                padding: 2rem;
                width: 100%;
+               .pic-pic{
+                background-color:white;
+                height: 30px;
+                width: 30px;
+                position: absolute;
+                bottom:0px;
+                right: 0px;
             }
+            }
+            
         }
         }
     }
@@ -267,17 +295,45 @@ table {
                 .our-clients{
                         // margin: 3rem;
                         // padding-left: 5rem;
-                        img{
-                            width: 100%;
+                        .forward{
+                            position: relative;
+                            .forward-pic{
+                                background-color:purple;
+                                height: 20px;
+                                width: 30px;
+                                position: absolute;
+                                bottom:0px;
+                                right: 0px;
+                            }
+                            img{
+                                width: 100%;
+                            }
                         }
+                        
                         .company{
                             padding-top: 1rem;
                         }
-               } 
+                    }
+             
             }
         
             .right{
                 margin-top: 2rem;
+                .forward{
+                    position: relative;
+                    .forward-pic{
+                        background-color:purple;
+                        height: 20px;
+                        width: 30px;
+                        position: absolute;
+                        bottom:0px;
+                        right: 0px;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+            
                 img{
                 width: 100%;
                     
@@ -285,7 +341,11 @@ table {
                 .bride{
                     padding-top: 1rem;
                 }
-            }
+
+            } 
+            
+
+           
     }
 }
 }
@@ -338,13 +398,13 @@ table {
 .footer{
     background:darkviolet;
     margin-top: 2rem;
-    padding: 2rem;
+    // padding: 2rem;
     .container{
         margin-top: 2rem;
-        margin-left: 6rem;
-        display: flex;
+        // margin-left: 6rem;
        .row{
-        display: flex;
+        .left{
+            padding-left: 6rem;
           .icon{
             display: flex;
             color: white;
@@ -362,7 +422,13 @@ table {
             display: flex;
             gap: 20px;
           }
-
+        }
+        .left-two{
+            display: flex;
+            gap: 10px;
+            padding-top: 2rem;
+            font-size: medium;
+            line-height: 1rem;
           .center{
             color: white;
             span{
@@ -376,10 +442,10 @@ table {
                 text-decoration: underline;
              }
           }
+        
 
           .end{
             color: white;
-            
             span{
                 text-decoration: underline;
             }
@@ -391,12 +457,22 @@ table {
                }
             }
           }
-
+        }
 
        }
     }
 }
 
+
+
+
+.active{
+    display:  block !important;
+}
+
+.hide{
+    display: none ;
+}
 
 /*
 ####################################################
@@ -580,7 +656,265 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+
+.banner{
+            .left{
+                .text{
+                    margin-top: 50px;
+                    h1{
+                        width: 100%;
+                        font-size: 30px;
+                    }
+                }
+                    .btn{
+                        display: flex;
+                        gap: 15px;
+                        padding-left: 0.1rem;
+                    
+                    button{
+                        border: none;
+                        background-color:purple;
+                        width: 8rem;
+                        color: white;
+                        
+                        gap: 10px;
+                
+                    }
+                    button1{
+                        
+                        background-color:white;
+                        width: 8rem;
+                        color: black;
+                        border: 3px solid purple;
+                    }
+                }
+                    .tags{
+                        display: flex;
+                        
+                        
+
+                        img{
+                            
+                            width: 30px;
+                            height: 30px;
+                            margin-top: 0;
+                            
+                         //    .card{
+                         //     height: 50%;
+                         //     width: 50%;
+                         //    }
+                         }
+                    }
+               
+            }
+
+            .right{
+                .cards{
+                    display: flex;
+                    flex-direction: row;
+                .first-pic{
+                    position: relative;
+                    top: 50px;
+                   
+                }
+            
+                }
+                
+            }
+       
+
+    }
+
+    .media{
+        margin: 5rem 0;
+        .container{
+            .row{
+                .left{
+                    .text-img{
+                        margin-left:5rem ;
+                        .text{
+                            font-weight: 500;
+                            width: 50%;
+                    .images{
+                        display: flex;
+                        flex-direction: row;
+                        width: 2rem;
+                        .pic{
+                            position: relative;
+                            top: 100px;
+                           
+                        }
+                    }
+                }
+            }
+        }
+
+        .right{
+            margin: 4rem 0;
+            .image-one{
+                img{
+                    height: 30vh;
+                    width: 100%;
+            .text-three{
+             p{
+                padding-top: 5rem;
+             }
+            }
+                }                   
+            }
+        }
+            }
+        }
+    }
+
+    .services{
+        .container{
+            .gallery{
+                gap: 10px;
+                display: flex;
+                .pics{
+                    width: 30vw;
+                    position: relative;
+                    img{
+                        width: 100%;
+                        height: 40vh;
+                        object-fit: cover;
+                        object-position: top;
+                        
+                        
+                    }
+                    
+                    .text-h3{
+                       position: absolute;
+                       top: 5px;
+                       background-color: blue;
+                       align-items: center;
+                       h3{
+                        align-items: baseline;
+                        text-align: center;
+                        color: aqua;
+                       }
+                        
+                    }
+            }
+            .card-one{
+                background: purple;
+                color: white;
+                width: 30vw;
+                height: 40vh;
+            }
+            }
+        }
+    }
+
+    .clients{
+        margin-top: 3rem;
+        .container{
+            
+                .row{
+                    
+                   .left{
+                    
+                    .our-clients{
+                            // margin: 3rem;
+                            // padding-left: 5rem;
+                            .forward{
+                                position: relative;
+                                .forward-pic{
+                                    background-color:purple;
+                                    height: 20px;
+                                    width: 30px;
+                                    position: absolute;
+                                    bottom:0px;
+                                    right: 0px;
+                                }
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                            
+                            .company{
+                                padding-top: 1rem;
+                            }
+                           
+                   } 
+                }
+            
+                .right{
+                    margin-top: 2rem;
+                    img{
+                    width: 100%;
+                        
+                    }
+                    
+              
+                    
+                }
     
+               
+        }
+    }
+    }
+    .footer{
+        background:darkviolet;
+        margin-top: 2rem;
+        padding: 2rem;
+        .container{
+            margin-top: 2rem;
+            margin-left: 6rem;
+           .row{
+            display: flex;
+              .icon{
+                display: flex;
+                color: white;
+                padding-top: 20px;
+                gap: 10px;
+                img{
+                    height: 100%;
+                }
+                .copy{
+                    width: 65%;
+    
+                }
+              }
+              .icons-two{
+                display: flex;
+                gap: 20px;
+              }
+    
+              .center{
+                color: white;
+                span{
+                    text-decoration: underline;
+                }
+              }
+    
+              .mid{
+                 color: white;
+                 span{
+                    text-decoration: underline;
+                 }
+              }
+    
+              .end{
+                color: white;
+                
+                span{
+                    text-decoration: underline;
+                }
+                .contact{
+                   display: flex;
+                   gap: 10px;
+                   img{
+                    height: 100%;
+                   }
+                }
+              }
+    
+    
+           }
+        }
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -699,9 +1033,6 @@ No media query since this is the default in Bootstrap because it is "mobile firs
                     img{
                         width: 100%;
                         height: fit-content;
-                    }
-                    .bride{
-                        padding-top: 1rem;
                     }
                 }
         }
