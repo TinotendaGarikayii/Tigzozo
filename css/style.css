@@ -105,33 +105,54 @@ table {
 .banner .left .btn {
   display: flex;
   justify-content: space-evenly;
+  gap: 10px;
 }
 .banner .left .btn button {
   border: none;
   background-color: purple;
-  width: 8rem;
+  width: 50vw;
+  height: 50px;
   color: white;
 }
-.banner .left .btn button1 {
+.banner .left .btn .button1 {
   background-color: white;
-  width: 8rem;
+  width: 50vw;
+  height: 50px;
   color: black;
   border: 3px solid purple;
 }
 .banner .left .tags {
   display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.banner .left .tags p {
+  margin-top: 12px;
 }
 .banner .left .tags img {
-  flex-direction: row;
   width: 30px;
   height: 30px;
-  margin-top: 20px;
 }
-.banner .left .tag p1 {
+.banner .left .tags .one {
   color: purple;
 }
 .banner .right .cards {
   display: flex;
+  gap: 5px;
+}
+.banner .right .cards .first-pic {
+  position: relative;
+  top: 50px;
+}
+.banner .right .cards .first-pic img {
+  height: 20rem;
+}
+.banner .right .cards .card-ten {
+  position: relative;
+  bottom: 50px;
+}
+.banner .right .cards .card-ten img {
+  height: 20rem;
 }
 
 .media {
@@ -144,6 +165,9 @@ table {
   display: flex;
   position: relative;
 }
+.media .container .row .left .images .hid {
+  display: none;
+}
 .media .container .row .left .images img {
   height: 60%;
   width: 40%;
@@ -153,7 +177,7 @@ table {
 }
 .media .container .row .left .images .pic img {
   height: 100%;
-  width: 80%;
+  width: 100%;
 }
 .media .container .row .right {
   margin: 4rem 0;
@@ -176,16 +200,15 @@ table {
 .services .container .gallery {
   padding-top: 2rem;
   gap: 10px;
-  margin-left: 4rem;
   display: flex;
+  flex-direction: column;
 }
 .services .container .gallery .pics {
-  width: 30vw;
   position: relative;
 }
 .services .container .gallery .pics img {
   width: 100%;
-  height: 40vh;
+  height: 35vh;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
@@ -210,7 +233,7 @@ table {
 .services .container .gallery .card-one {
   background: purple;
   color: white;
-  height: 40vh;
+  height: 35vh;
 }
 .services .container .gallery .card-one span {
   text-decoration: underline;
@@ -248,6 +271,9 @@ table {
 }
 .clients .container .row .left .our-clients .company {
   padding-top: 1rem;
+}
+.clients .container .row .pc-footer {
+  display: none !important;
 }
 .clients .container .row .right {
   margin-top: 2rem;
@@ -288,6 +314,11 @@ table {
   justify-content: center;
   align-items: center;
 }
+.instagram .container .insta .hid {
+  display: none;
+  height: -moz-fit-content;
+  height: fit-content;
+}
 .instagram .container .insta img {
   width: 15%;
   gap: 50px;
@@ -315,6 +346,10 @@ table {
   border: none;
 }
 
+.pc-footer {
+  display: none;
+}
+
 .footer {
   background: darkviolet;
   margin-top: 2rem;
@@ -322,24 +357,30 @@ table {
 .footer .container {
   margin-top: 2rem;
 }
-.footer .container .row .left {
-  padding-left: 6rem;
+.footer .container .row .first-second {
+  display: flex;
 }
-.footer .container .row .left .icon {
+.footer .container .row .first-second .left .icon {
   display: flex;
   color: white;
   padding-top: 20px;
   gap: 10px;
 }
-.footer .container .row .left .icon img {
+.footer .container .row .first-second .left .icon img {
   height: 100%;
 }
-.footer .container .row .left .icon .copy {
+.footer .container .row .first-second .left .icon .copy {
   width: 65%;
 }
-.footer .container .row .left .icons-two {
+.footer .container .row .first-second .left .icons-two {
   display: flex;
   gap: 20px;
+}
+.footer .container .row .first-second .center {
+  color: white;
+}
+.footer .container .row .first-second .center span {
+  text-decoration: underline;
 }
 .footer .container .row .left-two {
   display: flex;
@@ -347,12 +388,6 @@ table {
   padding-top: 2rem;
   font-size: medium;
   line-height: 1rem;
-}
-.footer .container .row .left-two .center {
-  color: white;
-}
-.footer .container .row .left-two .center span {
-  text-decoration: underline;
 }
 .footer .container .row .left-two .mid {
   color: white;
@@ -398,30 +433,41 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 /* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
+  .pc-footer {
+    display: block;
+    background-color: purple;
+  }
+  .pc-footer .row {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  .phone-footer {
+    display: none;
+  }
   .mobile-nav {
     display: none;
   }
   .pc-nav {
     display: block;
   }
-  .pc-nav .flex-container {
+  .flex-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .pc-nav .flex-container ul {
+  .flex-container ul {
     display: flex;
     color: black;
     gap: 12px;
   }
-  .pc-nav .flex-container ul li {
+  .flex-container ul li {
     color: black;
     font-size: 20px;
   }
-  .pc-nav .flex-container ul li span {
+  .flex-container ul li span {
     color: rgb 128, 34, 140;
   }
-  .pc-nav .flex-container ul .img1 {
+  .flex-container ul .img1 {
     height: 30px;
     width: 30px;
   }
@@ -537,7 +583,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     color: white;
     gap: 10px;
   }
-  .banner .left .btn button1 {
+  .banner .left .btn .button1 {
     background-color: white;
     width: 8rem;
     color: black;
@@ -554,10 +600,16 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   .banner .right .cards {
     display: flex;
     flex-direction: row;
+    gap: 5px;
+    width: 100%;
   }
   .banner .right .cards .first-pic {
     position: relative;
     top: 50px;
+  }
+  .banner .right .cards .card-ten {
+    position: relative;
+    bottom: 50px;
   }
   .media {
     margin: 5rem 0;
@@ -569,12 +621,15 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     font-weight: 500;
     width: 50%;
   }
-  .media .container .row .left .text-img .text .images {
+  .media .container .row .left .images {
     display: flex;
     flex-direction: row;
     width: 2rem;
   }
-  .media .container .row .left .text-img .text .images .pic {
+  .media .container .row .left .images .hid {
+    display: block;
+  }
+  .media .container .row .left .images .pic {
     position: relative;
     top: 100px;
   }
@@ -591,6 +646,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   .services .container .gallery {
     gap: 10px;
     display: flex;
+    flex-direction: row;
   }
   .services .container .gallery .pics {
     width: 30vw;
@@ -647,6 +703,52 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   .clients .container .row .right img {
     width: 100%;
   }
+  .instagram {
+    margin-top: 3rem;
+  }
+  .instagram .container .seen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .instagram .container .insta {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .instagram .container .insta .hid {
+    display: block;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .instagram .container .insta img {
+    width: 15%;
+    gap: 50px;
+  }
+  .instagram .container .insta .second-pic {
+    position: relative;
+    top: 5rem;
+  }
+  .instagram .container .tig {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .instagram .container .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .instagram .container .btn button {
+    background: darkviolet;
+    color: white;
+    width: 7rem;
+    height: 3rem;
+    border: none;
+  }
   .footer {
     background: darkviolet;
     margin-top: 2rem;
@@ -658,27 +760,31 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   }
   .footer .container .row {
     display: flex;
+    flex-direction: row !important;
   }
-  .footer .container .row .icon {
+  .footer .container .row .first-second {
+    display: flex;
+  }
+  .footer .container .row .first-second .left .icon {
     display: flex;
     color: white;
     padding-top: 20px;
     gap: 10px;
   }
-  .footer .container .row .icon img {
+  .footer .container .row .first-second .left .icon img {
     height: 100%;
   }
-  .footer .container .row .icon .copy {
+  .footer .container .row .first-second .left .icon .copy {
     width: 65%;
   }
-  .footer .container .row .icons-two {
+  .footer .container .row .first-second .left .icons-two {
     display: flex;
     gap: 20px;
   }
-  .footer .container .row .center {
+  .footer .container .row .first-second .center {
     color: white;
   }
-  .footer .container .row .center span {
+  .footer .container .row .first-second .center span {
     text-decoration: underline;
   }
   .footer .container .row .mid {
