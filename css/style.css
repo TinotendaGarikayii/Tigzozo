@@ -2,6 +2,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: "JosefinSans-Bold.ttf";
+  src: url("/fonts/josefin-sans/JosefinSans-Bold.ttf");
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -70,6 +74,17 @@ table {
   margin-left: 100px;
 }
 
+.active .pc-nav {
+  display: block !important;
+}
+.active .pc-nav ul {
+  gap: 2rem;
+}
+.active .mode {
+  height: 0;
+  width: 0;
+}
+
 .mobile-nav {
   display: block;
   display: flex;
@@ -92,15 +107,13 @@ table {
   background: black;
 }
 
-.banner {
-  font-family: "JosefinSans-Bold.ttf";
-}
 .banner .left .text h1 {
-  font-weight: bolder;
+  font-weight: 900;
   font-family: "JosefinSans-Bold.ttf";
 }
 .banner .left .text p {
   font-family: "JosefinSans-Bold.ttf";
+  width: 80%;
 }
 .banner .left .btn {
   display: flex;
@@ -113,6 +126,7 @@ table {
   width: 50vw;
   height: 50px;
   color: white;
+  font-family: "JosefinSans-Bold.ttf";
 }
 .banner .left .btn .button1 {
   background-color: white;
@@ -120,6 +134,7 @@ table {
   height: 50px;
   color: black;
   border: 3px solid purple;
+  font-family: "JosefinSans-Bold.ttf";
 }
 .banner .left .tags {
   display: flex;
@@ -128,6 +143,7 @@ table {
 }
 .banner .left .tags p {
   margin-top: 12px;
+  font-family: "JosefinSans-Bold.ttf";
 }
 .banner .left .tags img {
   width: 30px;
@@ -135,6 +151,7 @@ table {
 }
 .banner .left .tags .one {
   color: purple;
+  font-family: "JosefinSans-Bold.ttf";
 }
 .banner .right .cards {
   display: flex;
@@ -158,8 +175,14 @@ table {
 .media {
   margin: 2rem 0;
 }
+.media .container .row .left h2 {
+  font-family: "JosefinSans-Bold.ttf";
+}
 .media .container .row .left .text-img {
   margin-top: 2rem;
+}
+.media .container .row .left .text-img .text {
+  font-family: "JosefinSans-Bold.ttf";
 }
 .media .container .row .left .images {
   display: flex;
@@ -186,17 +209,24 @@ table {
   height: 60vh;
   width: 100%;
 }
-.media .container .row .right .image-one img .text-three p {
-  padding-top: 5rem;
+.media .container .row .right .text-three {
+  font-family: "JosefinSans-Bold.ttf";
 }
-.media button {
-  background: darkviolet;
+.media .container .row .right .text-three p {
+  padding-top: 1rem;
+}
+.media .container .row .right button {
+  background: purple;
   border: none;
   color: white;
   width: 8rem;
   height: 2rem;
+  font-family: "JosefinSans-Bold.ttf";
 }
 
+.services .container h4 {
+  font-family: "JosefinSans-Bold.ttf";
+}
 .services .container .gallery {
   padding-top: 2rem;
   gap: 10px;
@@ -221,6 +251,7 @@ table {
   position: absolute;
   bottom: 0px;
   padding-left: 8rem;
+  font-family: "JosefinSans-Bold.ttf";
 }
 .services .container .gallery .pics .pic {
   background-color: purple;
@@ -242,6 +273,7 @@ table {
   position: relative;
   padding: 2rem;
   width: 100%;
+  font-family: "JosefinSans-Bold.ttf";
 }
 .services .container .gallery .card-one .texting .pic-pic {
   background-color: white;
@@ -254,6 +286,9 @@ table {
 
 .clients {
   margin-top: 3rem;
+}
+.clients .container .row .left h4 {
+  font-family: "JosefinSans-Bold.ttf";
 }
 .clients .container .row .left .our-clients .forward {
   position: relative;
@@ -271,6 +306,7 @@ table {
 }
 .clients .container .row .left .our-clients .company {
   padding-top: 1rem;
+  font-family: "JosefinSans-Bold.ttf";
 }
 .clients .container .row .pc-footer {
   display: none !important;
@@ -297,6 +333,7 @@ table {
 }
 .clients .container .row .right .bride {
   padding-top: 1rem;
+  font-family: "JosefinSans-Bold.ttf";
 }
 
 .instagram {
@@ -307,6 +344,11 @@ table {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  font-family: "JosefinSans-Bold.ttf";
+}
+.instagram .container .seen .gram {
+  font-style: italic;
+  font-family: "JosefinSans-Bold.ttf";
 }
 .instagram .container .insta {
   gap: 10px;
@@ -332,6 +374,7 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "JosefinSans-Bold.ttf";
 }
 .instagram .container .btn {
   display: flex;
@@ -339,11 +382,12 @@ table {
   align-items: center;
 }
 .instagram .container .btn button {
-  background: darkviolet;
+  background: purple;
   color: white;
   width: 7rem;
   height: 3rem;
   border: none;
+  font-family: "JosefinSans-Bold.ttf";
 }
 
 .pc-footer {
@@ -351,7 +395,7 @@ table {
 }
 
 .footer {
-  background: darkviolet;
+  background: purple;
   margin-top: 2rem;
 }
 .footer .container {
@@ -371,6 +415,7 @@ table {
 }
 .footer .container .row .first-second .left .icon .copy {
   width: 65%;
+  font-family: "JosefinSans-Bold.ttf";
 }
 .footer .container .row .first-second .left .icons-two {
   display: flex;
@@ -378,25 +423,28 @@ table {
 }
 .footer .container .row .first-second .center {
   color: white;
+  font-family: "JosefinSans-Bold.ttf";
 }
 .footer .container .row .first-second .center span {
   text-decoration: underline;
 }
 .footer .container .row .left-two {
   display: flex;
-  gap: 10px;
+  gap: 2rem;
   padding-top: 2rem;
   font-size: medium;
   line-height: 1rem;
 }
 .footer .container .row .left-two .mid {
   color: white;
+  font-family: "JosefinSans-Bold.ttf";
 }
 .footer .container .row .left-two .mid span {
   text-decoration: underline;
 }
 .footer .container .row .left-two .end {
   color: white;
+  font-family: "JosefinSans-Bold.ttf";
 }
 .footer .container .row .left-two .end span {
   text-decoration: underline;
@@ -437,9 +485,47 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     display: block;
     background-color: purple;
   }
-  .pc-footer .row {
+  .pc-footer .container {
+    margin: 2rem;
+  }
+  .pc-footer .container .row {
     display: flex !important;
     flex-direction: row !important;
+    color: white;
+    font-family: "JosefinSans-Bold.ttf";
+  }
+  .pc-footer .container .row .icon {
+    display: flex;
+    color: white;
+    padding-top: 20px;
+    gap: 10px;
+  }
+  .pc-footer .container .row .icon img {
+    height: 100%;
+  }
+  .pc-footer .container .row .icon .copy {
+    width: 65%;
+    font-family: "JosefinSans-Bold.ttf";
+  }
+  .pc-footer .container .row .icons-two {
+    display: flex;
+    gap: 20px;
+  }
+  .pc-footer .container .row span {
+    text-decoration: underline;
+  }
+  .pc-footer .container .row .end {
+    color: white;
+  }
+  .pc-footer .container .row .end span {
+    text-decoration: underline;
+  }
+  .pc-footer .container .row .end .contact {
+    display: flex;
+    gap: 10px;
+  }
+  .pc-footer .container .row .end .contact img {
+    height: 100%;
   }
   .phone-footer {
     display: none;
@@ -458,14 +544,19 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   .flex-container ul {
     display: flex;
     color: black;
-    gap: 12px;
+    justify-content: space-between;
+    justify-content: space-around;
+    gap: 3rem;
+    padding-left: 20rem;
   }
   .flex-container ul li {
     color: black;
     font-size: 20px;
+    font-family: "JosefinSans-Bold.ttf";
+    font-weight: 900;
   }
   .flex-container ul li span {
-    color: rgb 128, 34, 140;
+    color: purple;
   }
   .flex-container ul .img1 {
     height: 30px;
@@ -597,6 +688,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     height: 30px;
     margin-top: 0;
   }
+  .banner .right {
+    padding-left: 10rem;
+  }
   .banner .right .cards {
     display: flex;
     flex-direction: row;
@@ -621,17 +715,20 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     font-weight: 500;
     width: 50%;
   }
-  .media .container .row .left .images {
+  .media .container .row .left .text-img .images {
     display: flex;
     flex-direction: row;
-    width: 2rem;
   }
-  .media .container .row .left .images .hid {
+  .media .container .row .left .text-img .images .hid {
     display: block;
   }
-  .media .container .row .left .images .pic {
+  .media .container .row .left .text-img .images .pic {
     position: relative;
-    top: 100px;
+    top: 50px;
+  }
+  .media .container .row .left .text-img .images .pic img {
+    width: 70%;
+    height: 100%;
   }
   .media .container .row .right {
     margin: 4rem 0;
