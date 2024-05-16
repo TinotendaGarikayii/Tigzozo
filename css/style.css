@@ -56,7 +56,7 @@ table {
   border-spacing: 0;
 }
 
-body {
+* {
   overflow-x: hidden;
 }
 
